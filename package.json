@@ -1,0 +1,24 @@
+{
+  "name": "whaleback",
+  "author": "yangban",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:host\" \"npm run dev:first\" ",
+    "dev:host": "cd host && npm run dev",
+    "dev:first": "cd first && npm run dev",
+    "build": "npm run build:host && npm run build:first",
+    "build:host": "cd host && npm run build",
+    "build:first": "cd first && npm run build",
+    "preview": "concurrently \"npm run preview:host\" \"npm run preview:first\" ",
+    "preview:host": "cd host && npm run preview",
+    "preview:first": "cd first && npm run preview",
+    "clean": "rm -rf node_modules host/node_modules remote/node_modules",
+    "setup": "npm install && concurrently \"npm run setup:host\" \"npm run setup:first\" ",
+    "setup:host": "cd host && npm install",
+    "setup:first": "cd first && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
