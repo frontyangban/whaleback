@@ -6,12 +6,10 @@ const PostDetail = () => {
   const { id } = useParams<{ id: string }>()
   const [content, setContent] = useState('')
 
-  // id 가 docker-kubernetes-250402.md 라면
-  // /md/docker-kubernetes-250402.md 파일이 있을 것!
-  // 이것을 Markdown의 children으로 넣어주면 된다.
+  // 아 이거 애매하네.. 이 녀석의 오리진으로 가져와야대는디.
   useEffect(() => {
     if (id) {
-      const filePath = `/first/md/${id}`
+      const filePath = `https://whaleback-first.vercel.app/md/${id}`
 
       fetch(filePath)
         .then(response => {
