@@ -3,7 +3,7 @@
 declare module 'first/App'
 
 interface ImportMetaEnv {
-  readonly VITE_APP_REMOTE_FIRST_APP_URL: string
+  readonly VITE_APP_REMOTE_FIRST_URL: string
 }
 
 interface ImportMeta {

@@ -3,6 +3,18 @@ import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
 import path from 'path'
 
+const getRemoteEntryUrl = (remoteName: string) => {
+  const remoteUrl =
+    process.env[`VITE_APP_REMOTE_${remoteName.toUpperCase()}_URL`]
+
+  if (!remoteUrl) {
+    // TODO port mapper
+    return `http://localhost:5000/assets/remoteEntry.js`
+  }
+
+  return remoteUrl
+}
+
 export default defineConfig({
   plugins: [
     react(),
@@ -10,7 +22,7 @@ export default defineConfig({
       name: 'host',
       remotes: {
         // first/App
-        first: 'https://whaleback-first.vercel.app/assets/remoteEntry.js',
+        first: getRemoteEntryUrl('first'),
       },
       shared: {
         react: {
