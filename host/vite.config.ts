@@ -10,11 +10,7 @@ export default defineConfig({
       name: 'host',
       remotes: {
         // first/App
-        first:
-          `${
-            import.meta.env.VITE_APP_REMOTE_FIRST_APP_URL
-          }/assets/remoteEntry.js` ||
-          'http://localhost:5001/assets/remoteEntry.js', // Updated remote config
+        first: 'https://whaleback-first.vercel.app/assets/remoteEntry.js',
       },
       shared: {
         react: {
@@ -29,7 +25,7 @@ export default defineConfig({
       },
     }),
   ],
-  envDir: './env',
+  envDir: 'env',
   server: {
     port: 5000,
     strictPort: true,
