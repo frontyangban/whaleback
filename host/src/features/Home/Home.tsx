@@ -1,13 +1,5 @@
-import { Link } from 'react-router-dom'
-
 const Home = () => {
-  return (
-    <div>
-      <h1>host app</h1>
-      <p>여기가 다 받아줄거라능</p>
-      <Link to="/first">go to first app</Link>
-    </div>
-  )
+  return <div>홈에선 무엇을 할지.</div>
 }
 
 export default Home

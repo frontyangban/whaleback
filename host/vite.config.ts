@@ -16,14 +16,14 @@ export default defineConfig(({ mode }) => {
           first:
             mode === 'production'
               ? env.VITE_APP_REMOTE_FIRST_URL
-              : 'localhost:5000/assets/remoteEntry.js',
+              : 'http://localhost:5001/assets/remoteEntry.js',
         },
         shared: {
           react: {
-            requiredVersion: '^18.2.0',
+            requiredVersion: '19.1.0',
           },
           'react-dom': {
-            requiredVersion: '^18.2.0',
+            requiredVersion: '19.1.0',
           },
           'react-router-dom': {
             requiredVersion: '^6.22.2',

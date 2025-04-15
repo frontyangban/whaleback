@@ -14,10 +14,10 @@ export default defineConfig({
       },
       shared: {
         react: {
-          requiredVersion: '^18.2.0',
+          requiredVersion: '19.1.0',
         },
         'react-dom': {
-          requiredVersion: '^18.2.0',
+          requiredVersion: '19.1.0',
         },
         'react-router-dom': {
           requiredVersion: '^6.22.2',
