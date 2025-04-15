@@ -11,7 +11,7 @@ const PostDetail = () => {
   // 이것을 Markdown의 children으로 넣어주면 된다.
   useEffect(() => {
     if (id) {
-      const filePath = `/md/${id}`
+      const filePath = `/first/md/${id}`
 
       fetch(filePath)
         .then(response => {
