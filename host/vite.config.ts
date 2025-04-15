@@ -9,7 +9,12 @@ export default defineConfig({
     federation({
       name: 'host',
       remotes: {
-        first: 'http://localhost:5001/assets/remoteEntry.js', // Updated remote config
+        // first/App
+        first:
+          `${
+            import.meta.env.VITE_APP_REMOTE_FIRST_APP_URL
+          }/assets/remoteEntry.js` ||
+          'http://localhost:5001/assets/remoteEntry.js', // Updated remote config
       },
       shared: {
         react: {
@@ -24,6 +29,7 @@ export default defineConfig({
       },
     }),
   ],
+  envDir: './env',
   server: {
     port: 5000,
     strictPort: true,

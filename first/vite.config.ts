@@ -25,6 +25,7 @@ export default defineConfig({
       },
     }),
   ],
+  envDir: './env',
   server: {
     port: 5001,
     strictPort: true,
