@@ -12,10 +12,10 @@ export default defineConfig(({ mode }) => {
       federation({
         name: 'host',
         remotes: {
-          // first/App
-          first:
+          // posts/App
+          posts:
             mode === 'production'
-              ? env.VITE_APP_REMOTE_FIRST_URL
+              ? env.VITE_APP_REMOTE_POSTS_URL
               : 'http://localhost:5001/assets/remoteEntry.js',
         },
         shared: {

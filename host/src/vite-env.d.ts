@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 
-declare module 'first/App'
+// posts app for blogging
+declare module 'posts/App'
 
 interface ImportMetaEnv {
   readonly VITE_APP_REMOTE_FIRST_URL: string

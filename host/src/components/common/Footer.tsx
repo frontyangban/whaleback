@@ -1,3 +1,7 @@
 export const Footer = () => {
-  return <footer>2025 양반</footer>
+  return (
+    <footer className="p-2 text-center">
+      2025 Built with module federation.
+    </footer>
+  )
 }

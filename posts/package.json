@@ -1,5 +1,6 @@
 {
-  "name": "first",
+  "name": "posts",
+  "description": "posts app for microfrontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
