@@ -26,7 +26,7 @@ const PostDetail = () => {
 
   return (
     <div>
-      <Markdown>{content}</Markdown>
+      <Markdown children={content} />
     </div>
   )
 }
