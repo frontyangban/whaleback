@@ -12,7 +12,6 @@ export default defineConfig(({ mode }) => {
       federation({
         name: 'host',
         remotes: {
-          // posts/App
           posts:
             mode === 'production'
               ? env.VITE_APP_REMOTE_POSTS_URL
