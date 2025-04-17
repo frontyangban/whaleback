@@ -9,7 +9,7 @@ const PostDetail = () => {
   // 아 이거 애매하네.. 이 녀석의 오리진으로 가져와야대는디.
   useEffect(() => {
     if (id) {
-      const filePath = `https://whaleback-first.vercel.app/md/${id}`
+      const filePath = `https://whaleback-posts.vercel.app/md/${id}`
 
       fetch(filePath)
         .then(response => {

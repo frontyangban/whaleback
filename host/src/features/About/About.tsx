@@ -41,18 +41,17 @@ const ProjectInfo = ({
 
 const About = () => {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12 text-gray-800 font-sans">
+    <main className="text-gray-800 font-sans">
       {/* Header */}
       <section className="mb-12">
         <h1 className="text-4xl font-extrabold text-gray-700">Taeyang Kim</h1>
         <p className="text-lg text-gray-600 mt-1">Frontend Developer</p>
         <div className="mt-2 text-sm text-gray-500 space-y-1">
-          <a href="mailto:frontyangban@gmail.com" className="block">
-            📧 frontyangban@gmail.com
-          </a>
+          <a href="mailto:frontyangban@gmail.com">📧 frontyangban@gmail.com</a>{' '}
+          <br />
           <a
             href="https://github.com/yangban2"
-            className="flex items-center"
+            className="inline-flex items-center"
             target="_blank"
           >
             <GithubIcon className="w-4 h-4 mr-1" /> yangban2

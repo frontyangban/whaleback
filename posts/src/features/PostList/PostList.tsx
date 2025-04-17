@@ -5,7 +5,7 @@ const PostList = () => {
   return (
     <ul>
       {FILE_LIST.map(file => (
-        <Link key={file} to={`/first/${file}`}>
+        <Link key={file} to={`/posts/${file}`}>
           {file}
         </Link>
       ))}
