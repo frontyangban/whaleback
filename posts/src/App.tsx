@@ -6,7 +6,7 @@ function App() {
   const location = useLocation()
   console.log('Current Path In Remote:', location.pathname)
   return (
-    <div>
+    <div className="w-[848px]">
       <Routes>
         <Route path="/" element={<PostList />} />
         {/* dynamic route for post detail */}

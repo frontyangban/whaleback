@@ -1,3 +1,9 @@
+---
+title: 'Docker & Kubernetes (2)'
+date: '2025-04-02'
+description: 'Docker 이미지와 컨테이너'
+---
+
 # Docker & Kubernetes
 
 ### Section 2. Docker Image & Container: Core building block
