@@ -6,6 +6,7 @@ interface ProjectInfoProps {
   stack: string
   description: string
   link?: string
+  children?: React.ReactNode
 }
 
 const ProjectInfo = ({
@@ -14,6 +15,7 @@ const ProjectInfo = ({
   period,
   stack,
   link,
+  children,
 }: ProjectInfoProps) => {
   return (
     <div className="border rounded-xl p-4 shadow-sm bg-white">
@@ -32,6 +34,7 @@ const ProjectInfo = ({
           🔗 {link}
         </a>
       )}
+      {children}
     </div>
   )
 }
@@ -159,7 +162,9 @@ const About = () => {
             stack="Next.js, React, TypeScript, TailwindCSS"
             description="장기 카셰어링 서비스 전면 리뉴얼. 기술 블로그 작성 및 혜택 태그 UI 개선."
             link="https://plan.socar.kr"
-          />
+          >
+            <div>ddd</div>
+          </ProjectInfo>
           <ProjectInfo
             title="쏘카 간편결제"
             period="2022.12 - 2023.02"
