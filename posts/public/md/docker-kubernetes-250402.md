@@ -27,7 +27,7 @@ description: 'Docker 이미지와 컨테이너'
     - 쉽게 가독하고 작성하려면 Vs code Docker Extension을 설치하자.
 - pre-built vs. custom images
 
-  ```docker
+```docker
   # 일반적으로 FROM 으로 시작. 이미지 이름으로 환경을 세팅. 로컬이나 도커 허브에 있는 이미지 사용 가능
   FROM node
 
@@ -47,17 +47,17 @@ description: 'Docker 이미지와 컨테이너'
   # RUN node server.js
   # 컨테이너가 시작될 때 실행할 명령어를 지정하는 것.
   CMD ["node", "server.js"]
-  ```
+```
 
-  - 도커파일을 만들고 이것을 이미지로 변환한 다음 궁극적으로 컨테이너화하려면?
-  - docker build {PATH*도커파일*위치}: 도커파일의 명령에 따라 이미지를 만들고 싶다.
-  - writing image sha256:{IMAGE_ID}
-  - docker run IMAGE_ID
-  - 하지만 포트를 expose했음에도 로컬호스트에 웹사이트가 표시되지 않는다…
-  - docker ps 로 확인해보자. (-a가 없다면 실행 중인 프로세스만 표시)
-  - docker stop CONTAINER_NAME
-  - 도커파일에 expose 명령이 있지만.. 이것은 실제로 도큐먼테이션 목적으로만 추가되었기 때문. 아무것도 안 하는 명령어임.
-  - docker run -p (publish) 도커에게 어떤 로컬 포트가 있는지 알려줄 수 있다. 로컬 머신의 어ㄸ너 포트가 내부의 도커 특정 포트에 액세스할 수 있는지. 로컬 포트(애플리케이션에 엑세스하려는) 3000: 내부 도커 컨테이너 노출 포트 80
+- 도커파일을 만들고 이것을 이미지로 변환한 다음 궁극적으로 컨테이너화하려면?
+- docker build {PATH*도커파일*위치}: 도커파일의 명령에 따라 이미지를 만들고 싶다.
+- writing image sha256:{IMAGE_ID}
+- docker run IMAGE_ID
+- 하지만 포트를 expose했음에도 로컬호스트에 웹사이트가 표시되지 않는다…
+- docker ps 로 확인해보자. (-a가 없다면 실행 중인 프로세스만 표시)
+- docker stop CONTAINER_NAME
+- 도커파일에 expose 명령이 있지만.. 이것은 실제로 도큐먼테이션 목적으로만 추가되었기 때문. 아무것도 안 하는 명령어임.
+- docker run -p (publish) 도커에게 어떤 로컬 포트가 있는지 알려줄 수 있다. 로컬 머신의 어ㄸ너 포트가 내부의 도커 특정 포트에 액세스할 수 있는지. 로컬 포트(애플리케이션에 엑세스하려는) 3000: 내부 도커 컨테이너 노출 포트 80
 
 - EXPOSE
   - EXPOSE 는 선택 사항임. 컨테이너의 프로세스가 이 포트를 노출할 것임을 문서화하는 것. 하지만 이 동작을 문서화하는 것이 모범적인 사용법이다.

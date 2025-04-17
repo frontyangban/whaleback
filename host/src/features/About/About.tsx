@@ -1,5 +1,4 @@
 import GithubIcon from '@/components/svgs/GithubIcon'
-import { ListTodo } from 'lucide-react'
 
 interface ProjectInfoProps {
   title: string
