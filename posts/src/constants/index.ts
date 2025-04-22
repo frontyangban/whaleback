@@ -11,4 +11,10 @@ export const FILE_LIST = [
     fileName: 'docker-kubernetes-250421.md',
     description: '컨테이너에서의 데이터 관리, 볼륨',
   },
+  {
+    title: 'Docker & Kubernetes (4) - 컨테이너 간 통신',
+    date: '2025-04-22',
+    fileName: 'docker-kubernetes-250422.md',
+    description: '컨테이너에서의 통신',
+  },
 ]
