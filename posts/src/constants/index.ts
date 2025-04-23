@@ -17,4 +17,11 @@ export const FILE_LIST = [
     fileName: 'docker-kubernetes-250422.md',
     description: '컨테이너에서의 통신',
   },
+  {
+    title:
+      'Docker & Kubernetes (5) - Docker로 다중 컨테이너 어플리케이션 구축하기',
+    date: '2025-04-23',
+    fileName: 'docker-kubernetes-250423.md',
+    description: '다중 컨테이너 구조의 어플리케이션 유즈케이스 구축해보기.',
+  },
 ]

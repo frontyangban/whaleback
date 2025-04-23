@@ -1,0 +1,26 @@
+### Section 5. Docker로 다중 컨테이너 어플리케이션 구축하기
+
+- 실제 어플리케이션에서 단일 컨테이너로 해도 되지만 멀티인 경우가 더 많음.
+  - 데이터베이스, 백엔드 웹 서버, 프론트엔트 어플리케이션 등..
+  - mongodb
+    - `docker run —name mongodb —rm -d -p 27017:27017 —network multi-app mongo`
+    - 추가 요구사항: 데이터는 영속적이어야 함
+      - `-v data:/data/db`
+      - 데이터의 위치는 도큐를 보자.
+    - 추가 요구사항: 접근이 제한되어야 함.
+      - -e MONGO_INITDB_ROOT_USERNAME=max
+      - -e MONGO_INITDB_ROOT_PASSWORD=secret
+      -
+  - backend
+    - `docker run -d --rm -p 80:80 --network multi-app -v logs:/logs --name goals-backend goals-node`
+    - 추가 요구사항: 일부 데이터는 영속적이어야 함.
+      - -v logs:/app/logs
+    - 추가 요구사항: 실시간으로 코드베이스를 반영해야 함.
+      - -v “/Users/yangban/Desktop/study/docker-kubernetes/multi-01-starting-setup/backend”:/app
+    - finally: `docker run --name goals-backend --rm -p 80:80 --network multi-app -v logs:/app/logs -v "/Users/yangban/Desktop/study/docker-kubernetes/multi-01-starting-setup/backend":/app -v /app/node_modules -e MONGODB_USERNAME=asdasd -e MONGODB_PASSWORD=asdasd goals-node`
+  - frontend
+    - `docker run -d --rm -p 3000:3000 --name goals-frontend goals-react`
+    - 그러나 프론트엔드는 브라우저에서 실행되므로, 컨테이너 이름을 브라우저 DNS에서 알 수가 없음. [localhost](http://localhost:80)처럼 브라우저에서 접근 가능한 도메인을 써야 하고, 백엔드는 80 포트를 열어야 함.
+    - 추가 요구사항: 실시간으로 코드베이스를 반영해야 함.
+      - 바인드 마운트 매핑
+    - 근데.. 왜 react-scripts start 을 통해 Dev server를 실행하는 것인가? 프론트엔드 서버가 필요한 경우를 대비해서(like node SSR 서버..) 강의를 만들었다 생각.
