@@ -266,6 +266,68 @@ const About = () => {
           <li>정보처리기사 취득 (2021.08)</li>
         </ul>
       </section>
+
+      {/* Former  */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
+          🎨 ETC / 이전 활동
+        </h2>
+        <div className="space-y-6">
+          <div className="bg-gray-50 p-4 rounded-lg shadow-sm border">
+            <h3 className="text-lg font-bold">썬파워 Youtube</h3>
+            <p className="text-sm text-gray-500">2019년 1월 - 2020년 5월</p>
+            <p className="mt-2 text-sm text-gray-700">
+              Nintendo Switch를 주제로 약 1년간 운영한 유튜브 채널로, 양질의
+              콘텐츠를 제공했으나 꾸준하지 못했던 경험입니다.
+              <br />
+              본업을 가정하며 시작했지만 현실적인 제약으로 인해 지속성은
+              부족했으며, 현재의 꾸준함과 크리에이티브 기반을 다지는 데 도움을
+              주었습니다.
+            </p>
+            <p className="text-sm mt-2">
+              🔗{' '}
+              <a
+                href="https://www.youtube.com/channel/UCqVejAZcTcrgUWfwG5CkrlQ"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                유튜브 채널 바로가기
+              </a>
+            </p>
+            <p className="text-xs mt-2 text-gray-500">
+              🎥 보유 기술: Adobe Premiere Pro, Adobe After Effects, Adobe
+              Photoshop
+            </p>
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-lg shadow-sm border">
+            <h3 className="text-lg font-bold">재미지상주의</h3>
+            <p className="text-sm text-gray-500">2016년 7월 - 2017년 3월</p>
+            <p className="mt-2 text-sm text-gray-700">
+              "게임이 재밌으면 되는 거 아닐까?" 라는 생각으로 시작한 모바일 게임
+              개발 프로젝트.
+              <br />
+              기획자로 참여하여 '재미지상주의' 팀을 구성하고 모바일 게임 2종을
+              출시했습니다. 흥행은 실패했지만, 마케팅과 유저 도달의 중요성을
+              뼈저리게 느꼈던 시기이며 현재의 기획력과 추진력에 중요한 경험이
+              되었습니다.
+            </p>
+            <p className="text-sm mt-2">
+              🔗{' '}
+              <a
+                href="https://www.youtube.com/watch?v=sK54sYN3u3w"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                출시 게임 인터뷰 영상
+              </a>
+            </p>
+            <p className="text-xs mt-2 text-gray-500">
+              🎮 보유 기술: Unity, 프로젝트 관리, 게임 기획
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
