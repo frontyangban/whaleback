@@ -268,7 +268,7 @@ const About = () => {
       </section>
 
       {/* Former  */}
-      <section className="mb-12">
+      <section className="my-12">
         <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
           🎨 ETC / 이전 활동
         </h2>
